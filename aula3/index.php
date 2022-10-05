@@ -13,4 +13,4 @@ $nome = "Everthon";
 $idade = 20;
 $altura = 1.75;
 echo "Meu nome é $nome,minha idade é $idade e minha altura é $altura";
-echo"<hr>";
+echo "<hr>";
