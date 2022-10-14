@@ -31,7 +31,13 @@ echo "<hr>";
 $totalClientes = count($clientes);
 echo $totalClientes;
 echo "<hr>";
-
-foreach($carros as $valor ){
+// foreach
+foreach($carros as $valor ){"
     echo $valor. "<br>";
+}
+// Arrays associativos
+$pessoa= array("nome"=>"Rodrigo", "idade"=>"23", "altura"=>"1.32");
+$pessoa["cidade"]= "itabuna"
+foreach($pessoas as $indice=$valor){
+    echo $indice. ":". $valor. $ 
 }
