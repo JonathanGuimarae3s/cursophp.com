@@ -32,12 +32,20 @@ $totalClientes = count($clientes);
 echo $totalClientes;
 echo "<hr>";
 // foreach
-foreach($carros as $valor ){"
-    echo $valor. "<br>";
+foreach ($clientes as $valor){
+    echo $valor. "<br";
 }
+echo "<br>";
+
 // Arrays associativos
 $pessoa= array("nome"=>"Rodrigo", "idade"=>"23", "altura"=>"1.32");
-$pessoa["cidade"]= "itabuna"
-foreach($pessoas as $indice=$valor){
-    echo $indice. ":". $valor. $ 
-}
+$pessoa["cidade"] = "itabuna";
+foreach($pessoas as $indice=> $valor){
+    echo $indice. ":" .$valor. "<br>" ; 
+};
+// arraymultidimensional
+$times = array (
+    "cariocas" => array("vasco", "flamengo")
+    ,"paulistas" => array("santos"," sao paulo")
+    ,"baianos" => array("bahia" , "vitoria")
+);
