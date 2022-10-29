@@ -39,14 +39,15 @@ echo "<br>";
 
 $carros = array("camaro", "uno", "gol");
 $motos = array("pop100", "50cc", "cb100");
-$veiculos = array_merge($carros, $motos) ;
-print_r ($veiculos);
-echo"<br>";
+$veiculos = array_merge($carros, $motos);
+print_r($veiculos);
+echo "<br>";
 
 echo "array_pop";
 echo "<br>";
 //array_pop: exclui a ultima posição do array
-$exclui = array_pop($carros
+$exclui = array_pop(
+    $carros
 );
 print_r($carros);
 echo "elemento excluido do array -> ";
@@ -68,11 +69,11 @@ echo " <br>";
 
 // array_unshift : adiciona um ou mais elementos no inicio do array
 echo "array_unshift";
-$frutas = array("laranja","pera");
-print_r($frutas );
-array_unshift($frutas,"manga","acerola");
+$frutas = array("laranja", "pera");
 print_r($frutas);
-echo" <br>";
+array_unshift($frutas, "manga", "acerola");
+print_r($frutas);
+echo " <br>";
 
 // array_push : adiciona um ou mais elemento no final do array
 echo "array_push";
@@ -80,11 +81,24 @@ array_push($frutas, "jabuticaba", "abacaxi");
 print_r($frutas);
 echo " <br>";
 // array_combine: serve para mesclar dois arrays. o valor de o array1 sera o indice/chave e o valor do array2 sera os valores desse novo array3
-$keys = array("campeao","vice","terceiro");
+$keys = array("campeao", "vice", "terceiro");
 $values = array("flamengo", "vasco", "botafogo");
-$times= array_combine($keys, $values);
+$times = array_combine($keys, $values);
 print_r($times);
+echo " <br>";
+// array_sum :calcula a soma dos elementos dde um 
 
-// array_sum :serve para somar os valores do array
+$numeros = array(1, 2, 3, 4, 4);
+$somatorio = array_sum($numeros);
+print_r($somatorio);
+echo " <br>";
+//explode = tranforma uma string em um array
+$data = "24/12/2022";
+print_r(explode("/", $data));
+$frase = "Meu nome nao e jonny";
+echo " <br>";
+print_r(explode(" ", $data));echo explode("/", $data);
+// implode = transforma um array em string
 
-
+$string = implode(", ",$frutas);
+echo $string;
