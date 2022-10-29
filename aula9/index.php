@@ -97,8 +97,8 @@ $data = "24/12/2022";
 print_r(explode("/", $data));
 $frase = "Meu nome nao e jonny";
 echo " <br>";
-print_r(explode(" ", $data));echo explode("/", $data);
+
 // implode = transforma um array em string
 
-$string = implode(", ",$frutas);
+$string = implode(", ", $frutas);
 echo $string;
