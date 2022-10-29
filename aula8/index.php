@@ -32,20 +32,29 @@ $totalClientes = count($clientes);
 echo $totalClientes;
 echo "<hr>";
 // foreach
-foreach ($clientes as $valor){
+foreach ($clientes as $valor) {
     echo $valor. "<br";
 }
 echo "<br>";
 
 // Arrays associativos
-$pessoa= array("nome"=>"Rodrigo", "idade"=>"23", "altura"=>"1.32");
-$pessoa["cidade"] = "itabuna";
-foreach($pessoas as $indice=> $valor){
-    echo $indice. ":" .$valor. "<br>" ; 
+$pessoas = array("nome" => "Rodrigo", "idade" => "23", "altura" => "1.32");
+$pessoas["cidade"] = "itabuna";
+foreach ($pessoas as $indice => $valor) {
+    echo $indice. ":" .$valor. "<br>";
 };
-// arraymultidimensional
-$times = array (
-    "cariocas" => array("vasco", "flamengo")
-    ,"paulistas" => array("santos"," sao paulo")
-    ,"baianos" => array("bahia" , "vitoria")
+echo    "<hr>";
+// array multidimensional
+$times = array(
+    "cariocas" => array("campeao"=>"vasco","vice"=> "flamengo"), "paulistas" => array("santos", " sao paulo"), "baianos" => array("bahia", "vitoria")
 );
+foreach($times["cariocas"] as $indice=>$valor)
+{
+    echo $indice.":" .$valor. "<br>";
+};
+foreach ($times["baianos"] as $indice => $valor) {
+    echo $indice . ":" . $valor . "<br>";
+};
+foreach ($times["paulistas"] as $indice => $valor) {
+    echo $indice . ":" . $valor . "<br>";
+};
