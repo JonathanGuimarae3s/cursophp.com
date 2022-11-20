@@ -35,7 +35,7 @@ if (isset($_POST['enviar-formulario'])) {
         echo "sem erros";
     }
 }
-?>
+?> 
 
 <body>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
