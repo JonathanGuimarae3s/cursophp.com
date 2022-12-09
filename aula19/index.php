@@ -8,14 +8,14 @@
     <title>Document</title>
 </head>
 <?php
-// verificando se existe esse indice(enviar-formulario) na super global pos
+// verificando se existe esse indice(enviar-formulario) na super global post
 if (isset($_POST['enviar-formulario'])) :
     // setando os formatos permitidos
     $formatosPermitidos = array("png", "jpeg", "jpg", "gif");
     $quantidadeArquivos = count($_FILES['arquivos']['name']);
     $contador = 0;
     while ($contador < $quantidadeArquivos) :
-        //verificando se a extensao é valida com a função pathinfo 
+        //pegando a extensao do arquivo com a função pathinfo()
 
         $extensao = pathinfo($_FILES['arquivos']['name'][$contador], PATHINFO_EXTENSION);
         // verificnado se o valor da extensao existe no array formatosPermitidos com in_array (valor a ser procurado, array que que sera feita a busca)
@@ -33,7 +33,7 @@ if (isset($_POST['enviar-formulario'])) :
 
             else :
                 echo "Nao foi possivel fazer o upload";
-            endif;
+            endif; 
 
         else :
             echo "$extensao é formato invalido";
