@@ -1,5 +1,7 @@
 <?php
-
+// conexao 
+include 'php_action/db_connect.php';
+// header
 include_once 'includes/header.php'; ?>
 <div class="container">
     <div class="row justify-content-center align-items-center g-2">
@@ -19,7 +21,10 @@ include_once 'includes/header.php'; ?>
                             <th colspan="2">Ações</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody><?php $sql = "SELECT *FROM clientes";
+                    $resultado = mysqli_query($connect, $sql);
+                    
+                    ?>
                         <tr class="">
                             <td scope="row">Jonathan</td>
                             <td>Guimaraes</td>
