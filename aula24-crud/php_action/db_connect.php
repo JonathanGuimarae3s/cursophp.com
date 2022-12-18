@@ -6,9 +6,7 @@ $password = "";
 $db_name = "crud";
 
 $connect = mysqli_connect($severname, $username, $password, $db_name);
-mysqli_set_charset($connect, "utf-8");
+mysqli_set_charset($connect, "utf8");
 if (mysqli_connect_error()) :
-
-
     echo "[ERROR]" . mysqli_connect_error();
 endif;

@@ -1,8 +1,11 @@
 <?php
+
 // conexao 
 include 'php_action/db_connect.php';
 // header
-include_once 'includes/header.php'; ?>
+include_once 'includes/header.php';
+// mensagem
+include_once 'includes/message.php'; ?>
 <div class="container">
     <div class="row justify-content-center align-items-center g-2">
         <div class="col">
@@ -10,7 +13,7 @@ include_once 'includes/header.php'; ?>
             <a href="pages/forms.php" class="btn btn-success my-3">Adicionar Cliente</a>
             <div class="table-responsive">
 
-                <table class="table table-dark table-striped">
+                <table class="table table-secondary table-hover table-striped">
 
                     <thead>
                         <tr>
@@ -18,25 +21,27 @@ include_once 'includes/header.php'; ?>
                             <th scope="col">sobrenome</th>
                             <th scope="col">email</th>
                             <th scope="col"> idade</th>
-                            <th colspan="2">Ações</th>
+                            <th scope="col">Ações</th>
                         </tr>
                     </thead>
-                    <tbody><?php $sql = "SELECT *FROM clientes";
-                    $resultado = mysqli_query($connect, $sql);
-                    
-                    ?>
-                        <tr class="">
-                            <td scope="row">Jonathan</td>
-                            <td>Guimaraes</td>
-                            <td>Jonathan@gmail.com</td>
-                            <td>20</td>
-                            <td><button class="btn btn-danger remove"><i class="bi bi-trash"></i></button></td>
-                            <td><button class="btn btn-success edit"><i class="bi bi-pencil-fill"></i></button></td>
+                    <tbody><?php
+                            include_once 'php_action/read.php';
+                            ?>
 
-                        </tr>
 
                     </tbody>
                 </table>
+                <div role='alert' aria-live='assertive' aria-atomic='true' class='toast' data-bs-autohide='false'>
+                    <div class='toast-header'>
+                        <img src='...' class='rounded me-2' alt='...'>
+                        <strong class='me-auto'>Bootstrap</strong>
+                        <small>11 mins ago</small>
+                        <button type='button' class='btn-close' data-bs-dismiss='toast' aria-label='Close'></button>
+                    </div>
+                    <div class='toast-body'>
+                        <?php echo ($_SESSION['$mensagem']); ?>
+                    </div>
+                </div>
             </div>
 
 
@@ -46,4 +51,4 @@ include_once 'includes/header.php'; ?>
 </div>
 <?php
 
-include_once 'includes/header.php'; ?>.
+include_once 'includes/footer.php'; ?>.

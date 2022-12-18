@@ -25,7 +25,7 @@ include_once '../includes/header.php'; ?>
                     <input type="text" class="form-control" name="idade" id="idade" placeholder="">
                     <label for="idade">Idade</label>
                 </div>
-                <input type="submit" name="add-register" class=" btn btn-success" value="Adicionar Cliente">
+                <input onclick="toast.show()" type="submit" name="add-register" class=" btn btn-success" value="Adicionar Cliente">
                 <a href="../index.php" class="btn btn-outline-primary">Listar Clientes</a>
             </form>
 
