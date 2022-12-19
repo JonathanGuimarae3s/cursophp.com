@@ -1,27 +1,28 @@
 <?php
-// mensagem de status de cadastro
 session_start();
 if (isset($_SESSION['mensagem'])) :
-?>
+    echo (" <div class='toast-container position-fixed top-0 end-0 p-3 '>
+            <div id='toast' class='toast bg-primary' role='alert' aria-live='assertive' aria-atomic='true'>
+                <div class='toast-header d-flex justify-content-between'>
+                <i class='bi bi-info-circle'></i>
+                   
+                    
+                    <button type='button' class='btn-close' data-bs-dismiss='toast' aria-label='Close'></button>
+                </div>
+                <div class='toast-body text-white'>$_SESSION[mensagem]</div>
+            </div>
+        </div>") ?>
     <script>
         onload = () => {
+            const toastEl = document.getElementById("toast");
 
+            const toast = new bootstrap.Toast(toastEl);
 
-            var option = {
-                animation: true,
-                delay: 2000
-            };
-
-            function showToast() {
-                var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-                var toastList = toastElList.map(function(toastEl) {
-                    return new bootstrap.Toast(toastEl, option)
-                })
-                toastElList.show();
-            }
-            showToast();
-        }
+            toast.show();
+        };
     </script>
 <?php
 endif;
-session_unset(); ?>
+session_unset();
+
+?>

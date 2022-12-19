@@ -18,14 +18,14 @@ include_once '../includes/header.php'; ?>
                     <label for="lastName">Sobrenome</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" name="email" id="email" placeholder="">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="">
                     <label for="email">Email</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" name="idade" id="idade" placeholder="">
                     <label for="idade">Idade</label>
                 </div>
-                <input onclick="toast.show()" type="submit" name="add-register" class=" btn btn-success" value="Adicionar Cliente">
+                <input type="submit" name="add-register" class=" btn btn-success" value="Adicionar Cliente">
                 <a href="../index.php" class="btn btn-outline-primary">Listar Clientes</a>
             </form>
 
