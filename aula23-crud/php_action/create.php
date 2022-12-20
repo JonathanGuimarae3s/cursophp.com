@@ -2,12 +2,19 @@
 
 // conexao
 require_once 'db_connect.php';
+function clear($input)
+{
+    global $connect;
+    $var = mysqli_escape_string($connect, $input);
+    $var = htmlspecialchars($var);
+    return $var;
+}
 session_start();
 if (isset($_POST['add-register'])) :
-    $name = mysqli_escape_string($connect, $_POST['name']);
-    $lastName = mysqli_escape_string($connect, $_POST['lastName']);
-    $email = mysqli_escape_string($connect, $_POST['email']);
-    $idade = mysqli_escape_string($connect, $_POST['idade']);
+    $name = clear($_POST['name']);
+    $lastName = clear($_POST['lastName']);
+    $email = clear($_POST['email']);
+    $idade = clear($_POST['idade']);
     $sql = "INSERT INTO cliente (nome,sobrenome,email,idade) VALUES ('$name','$lastName','$email','$idade');";
 
     if (mysqli_query($connect, $sql)) :
