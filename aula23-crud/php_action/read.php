@@ -1,6 +1,6 @@
 <?php
 
-$sql = "SELECT *FROM cliente";
+$sql = "SELECT *FROM funcionario";
 $resultado = mysqli_query($connect, $sql);
 
 
@@ -11,6 +11,7 @@ while ($dados = mysqli_fetch_array($resultado)) {
         <td>$dados[sobrenome]</td>
         <td>$dados[email]</td>
         <td>$dados[idade]</td>
+        <td>$dados[cargo]</td>
         <td >
         
         <a href='./pages/edit.php?id=$dados[id]'><button class='btn btn-outline-success edit'><i class='bi bi-pencil-fill'> Editar</i></button></a>

@@ -6,7 +6,8 @@ include_once '../includes/header.php'; ?>
 <div class="container">
     <div class="row justify-content-center align-items-center g-2">
         <div class="col">
-            <h1>Cadastro de Cliente</h1>
+            <h1>Cadastro de funcionário
+            </h1>
             <form action="../php_action/create.php" method="POST">
 
                 <div class="form-floating mb-3">
@@ -25,8 +26,17 @@ include_once '../includes/header.php'; ?>
                     <input type="text" class="form-control" name="idade" id="idade" placeholder="">
                     <label for="idade">Idade</label>
                 </div>
+                <div class="mb-3">
+                    <label for="cargo" class="form-label">Cargo</label>
+                    <select class="form-select form-select-lg" name="cargo" id="cargo">
+                        <option selected>teste</option>
+                        <option value="">tesste</option>
+
+                    </select>
+                </div>
+                
                 <input type="submit" name="add-register" class=" btn btn-success" value="Adicionar Cliente">
-                <a href="../index.php" class="btn btn-outline-primary">Listar Clientes</a>
+                <a href="../index.php" class="btn btn-outline-primary">Listar funcionário</a>
             </form>
 
 

@@ -15,10 +15,13 @@ if (isset($_POST['add-register'])) :
     $lastName = clear($_POST['lastName']);
     $email = clear($_POST['email']);
     $idade = clear($_POST['idade']);
-    $sql = "INSERT INTO cliente (nome,sobrenome,email,idade) VALUES ('$name','$lastName','$email','$idade');";
+    $cargo = $_POST['cargo'];
+    // "INSERT INTO cliente (nome,sobrenome,email,idade) VALUES ('$name','$lastName','$email','$idade');";
+
+    $sql = "INSERT INTO funcionario(nome,sobrenome,email,idade,cargo) VALUES ('$name','$lastName','$email','$idade','$cargo');";
 
     if (mysqli_query($connect, $sql)) :
-        $_SESSION['mensagem'] = "Cliente cadastrado com sucesso! <i class='bi bi-emoji-smile'></i>";
+        $_SESSION['mensagem'] = "funcionario cadastrado com sucesso! <i class='bi bi-emoji-smile'></i>";
 
         header('Location:../index.php?success');
     else :

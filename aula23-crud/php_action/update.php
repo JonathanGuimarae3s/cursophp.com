@@ -10,10 +10,12 @@ if (isset($_POST['editar'])) :
     $lastName = mysqli_escape_string($connect, $_POST['lastName']);
     $email = mysqli_escape_string($connect, $_POST['email']);
     $idade = mysqli_escape_string($connect, $_POST['idade']);
-    $sql = "UPDATE cliente SET nome = '$name' , sobrenome = '$lastName', email='$email',idade = '$idade' WHERE id = '$id';";
+    $cargo = mysqli_escape_string($connect, $_POST['cargo']);
+
+    $sql = "UPDATE funcionario SET nome = '$name' , sobrenome = '$lastName', email='$email',idade = '$idade',cargo='$cargo' WHERE id = '$id';";
 
     if (mysqli_query($connect, $sql)) :
-        $_SESSION['mensagem'] = "Cliente atualizado com sucesso! <i class='bi bi-emoji-smile'></i>";
+        $_SESSION['mensagem'] = "funcionario atualizado com sucesso! <i class='bi bi-emoji-smile'></i>";
 
         header('Location:../index.php?success');
     else :
